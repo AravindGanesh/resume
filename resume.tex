@@ -13,6 +13,15 @@
 \settodepth\mydepth{Xygp}
 \setlength\fboxsep{0pt}
 
+\usepackage{lipsum}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
 \usepackage{fontawesome}
 %\usepackage{tasks}
 \usepackage{paralist}
@@ -158,6 +167,8 @@ Machine Learning and Deep Learning - Research and Applications on Image Data
     \item Coordinator of Workshops and Hackathon, ELAN \& nvision - 2018
     \item Active volunteer for NSS, IIT Hyderabad
 \end{itemize}
+
+\blfootnote{Follow the link for latest version of my resume:  \href{https://github.com/AravindGanesh/resume}{\textit{https://github.com/AravindGanesh/resume}} }
 
 \end{document}
 %----------------------------------------------------------------------------------------
