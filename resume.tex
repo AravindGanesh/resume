@@ -2,7 +2,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt]{article} % Default font size
+\documentclass[10pt]{report} % Default font size
 
 \input{structure.tex} % Include the file specifying document layout
 
@@ -14,21 +14,23 @@
 \setlength\fboxsep{0pt}
 
 \usepackage{lipsum}
-
-\newcommand\blfootnote[1]{%
-  \begingroup
-  \renewcommand\thefootnote{}\footnote{#1}%
-  \addtocounter{footnote}{-1}%
-  \endgroup
-}
+\usepackage{datetime}
+% \newcommand\blfootnote[1]{%
+%   \begingroup
+%   \renewcommand\thefootnote{}\footnote{#1}%
+%   \addtocounter{footnote}{-1}%
+%   \endgroup
+% }
 
 \usepackage{fontawesome}
+\usepackage{xcolor}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
 %\usepackage{tasks}
 \usepackage{paralist}
 \usepackage[colorlinks=true,linkcolor=black, urlcolor=black, hidelinks]{hyperref}
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = black, %Colour for external hyperlinks
+  urlcolor     = airforceblue, %Colour for external hyperlinks
   linkcolor    = black %Colour of internal links
 }
 \usepackage{nopageno}
@@ -48,18 +50,22 @@
 
 \parbox{0.5\textwidth}{ % First block
 \begin{tabbing} % Enables tabbing
-\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
-\faMapMarker \hspace{2} H201, Boys Hostel,IIT Hyderabad - 502285  \\ 
+%\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
+\faMapMarker \hspace{3} H201, Boys Hostel,IIT Hyderabad - 502285  \\ 
 \faEnvelope \hspace{2} \href{mailto:ee16btech11026@iith.ac.in}{ee16btech11026@iith.ac.in}\\
-\faEnvelope \hspace{2} \href{mailto:aravindganeshp.28@gmail.com}{aravindganeshp.28@gmail.com}
+\faEnvelope \hspace{2} \href{mailto:aravindganeshp.28@gmail.com}{aravindganeshp.28@gmail.com}\\
+\faPhone \hspace{2} +91 9182878840
+% \faBirthdayCake \hspace{2} 28th March, 1999
 \end{tabbing}}
 \hfill % Horizontal space between the two blocks
 \parbox{0.5\textwidth}{ % Second block
 \begin{tabbing} % Enables tabbing
 \hspace{0.5cm} \= \hspace{0.5cm} \= \kill % Spacing within the block
-\faPhone \> +91 9182878840 \\ % Home phone
+%\faPhone \> +91 9182878840 \\
+\faBirthdayCake  \> 28th March, 1999 \\ % Home phone
 \faGithub \> \href{https://github.com/AravindGanesh}{\textit{AravindGanesh}} \\
-\faLinkedin \> \href{https://www.linkedin.com/in/AravindGaneshP}{\textit{AravindGaneshP}}
+\faLinkedin \> \href{https://www.linkedin.com/in/AravindGaneshP}{\textit{AravindGaneshP}} \\
+\faLink \> \href{https://github.com/AravindGanesh/resume}{\textit{resume link}}
 \end{tabbing}}
 
 \hline
@@ -73,7 +79,7 @@
 \bf{2016 - present} \> \hspace{10}  B.Tech + Honors in Electrical Engineering \\
 \>  \hspace{10}  Indian Institute of Technology Hyderabad \\
 %\raisebox{-\mydepth}{\fbox{\includegraphics[height=\myheight]{iith.png}}} \\
-\> \hspace{10} CGPA: 8.28
+\> \hspace{10} \textbf{CGPA: 8.3}
 }
 
 \tabbedblock{
@@ -89,38 +95,51 @@
 \> \hspace{10} GPA: 9.7
 }
 
-\subsubsection{Significant Courses in B.Tech}
-\begin{inparaitem}[\hspace{2mm} •]
-\item Introduction to AI and ML
-\item Representation Learning
-\item Probabilistic Graphic Models
-\item Probability and Random Processes
-\item Digital Signal Processing
-\item Digital Modulation Techniques
-\item Digital Communications
-\item Data Structures 
-\item Data Analytics
-\item Information Sciences
-\item Multiple Antenna Systems
-\end{inparaitem}
 
 \hline 
 
 \section{Areas of Interest}
-Machine Learning and Deep Learning - Research and Applications on Image Data
+Research and applications in Machine Learning and Deep Learning (supervised and unsupervised). GANs, Image and Video processing, computer vision. 
 
 \vspace{3mm}
 \hline
 
 \section{Work Experience}
+\begin{itemize}
+    \item \textbf{2019 - Summer Internship}: Philips Innovation Campus, Bangalore \\
+    Data Augmentation using GANs.
+    \item \textbf{2018 - Summer Internship}: NemoCare, CFHE, IIT Hyderabad \\
+    Internship as an IoT developer. Develop a module to collect and transmit health data of infants to a single hub using Arduino, BLE and open-source I2C libraries. 
+    
+\end{itemize}
 \subsection{Projects}
 \begin{itemize}
-    \item \textbf{2018 - Summer Project:} Face Detection and Recognition and counting the number of persons in a video using openCV, DLib and FaceNet on videos(720p, 24fps) - 98\% accuracy on a small test data.  under the guidance of Dr.Sumohana, EE faculty, IIT Hyderabad 
-    \item \textbf{2018 - Summer Project:} Gait Recognition using HumanposeNN and GaitNN models - 92\% accuracy on small custom test dataset - under the guidance of Dr.Sumohana, EE faculty, IIT Hyderabad
-    \item Team member in IEEE VIP-cup 2018 - Lung tumor segmentation
-    \item IoT dev at Summer Internship at NemoCare  (a startup at IIT Hyderabad)
-    \item \textbf{IV semester project} Far Field Voice Activity Detection using RNN 
-    \item Technology support for soldiers: problem statement in InterIIT tech-meet 2017
+        \item \textbf{Face and Gait Recognition - Summer Project, 2018}: under the guidance of Dr.Sumohana, EE faculty, IIT Hyderabad 
+        \begin{itemize}[*]
+            \item Face Detection and Recognition and counting the number of persons in a video using openCV, DLib and FaceNet on videos(720p, 24fps) - 98\% accuracy on a small test dataset.
+            \item Gait Recognition using HumanposeNN and GaitNN models - 92\% accuracy on small custom test dataset
+            \item GitHub repo: \href{https://github.com/AravindGanesh/Face-Gait\_recognition}{\textit{AravindGanesh/Face-Gait\_recognition}}
+        \end{itemize}
+    
+    \item \textbf{Lung Tumor Segmentation - IEEE VIP-CUP 2018}:
+    Member in the team representing IIT Hyderabad in IEEE VIP-CUP, 2018 problem statement on segmentation of lung tumors on DICOM images. Secured 6th position in the same.
+    \item \textbf{Autoencoder for modeling Wireless Comm Systems} - Academic Project as a part of a course on Machine Learning Applications for Wireless Communications by Dr. Saidhiraj Amuru, EE faculty, IIT Hyderabad.
+    \begin{itemize}[*]
+        \item Analysis, implementation (in tensorflow) and experiments based on the paper - \textit{Deep Reinforcement Learning Autoencoder with Noisy Feedback}
+        \item Link to paper: \href{https://arxiv.org/pdf/1810.05419.pdf}{\textit{arxiv.org/pdf/1810.05419.pdf}}
+        \item GitHub Repo: \href{https://github.com/AravindGanesh/ML\_WirelessComm}{\textit{AravindGanesh/ML\_WirelessComm}}
+
+    \end{itemize}
+    \item \textbf{ChronoLSTM}: Academic project as a part of a course on Sequence Modeling
+    \begin{itemize}[*]
+        \item Analysis and implementation of the paper \textit{CAN RECURRENT NEURAL NETWORKS WARP TIME?}
+        \item Link to Paper: \href{ https://arxiv.org/pdf/1804.11188.pdf}{\textit{arxiv.org/pdf/1804.11188.pdf}}
+        \item GitHub Repo: \href{https://github.com/AravindGanesh/ChronoLSTM}{\textit{AravindGanesh/ChronoLSTM}}
+
+    \end{itemize}
+        \item \textbf{VAD}: IV semester project under the Guidance of Dr. Sri Rama Murty Kodukula
+    \\ Far Field Voice Activity Detection using RNN and Raspberry-Pi 
+    \item \textbf{Inter-IIT tech-meet 2017}: Problem statement - Technology support for Soldiers
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -128,33 +147,54 @@ Machine Learning and Deep Learning - Research and Applications on Image Data
 %----------------------------------------------------------------------------------------
 \hline
 
-\section{Skills}
+\section{Technical Experience}
 
-\skillgroup{Programming Languages}
-{
+\skillgroup{Significant Courses I have done in my B.Tech}{
+\begin{inparaitem}[\hspace{1.5mm} •]
+\item Introduction to AI and ML
+\item Representation Learning
+\item Deep Learning
+\item Sequence Modeling
+\item Kernel Methods
+\item Convex Optimization
+\item Submodular Functions
+\item ML Applications in Wireless Communications
+\item Probability and Random Processes
+\item DSP
+\item Digital Communications
+\item Data Structures 
+\item Data Analytics
+\item Information Sciences
+\item Multiple Antenna Systems
+\end{inparaitem}
+}
+\skillgroup{ML Frameworks}{
 \begin{itemize}
-    \item Python - numpy, tensorflow, keras, matplotlib, scipy, scikit-learn, opencv \\ (preference - Python3)
-    \item MATLAB
-    \item C
+    \item tensorflow and keras (eager)
+    \item scikit-learn
+    \item tensorflow\_probability (beginner level)
 \end{itemize}
 }
-
+ \skillgroup{Programming Languages}{
+ \begin{itemize}
+     \item python3 - numpy, scipy, matplotlib, PIL, scikit-image, opencv, pandas
+     \item C, C++ and matlab at basic level
+ \end{itemize}
+ }
 %------------------------------------------------
 
-\skillgroup{Skills in Current line of work}{
+\skillgroup{Machine Learning and Deep Learning}{
 \begin{itemize}
-    \item Deep Learning - CNN, GAN, VAE (currently working on GANs), basic idea on RNN and LSTM 
-    \item Machine Learning - Classic supervised and unsupervised techniques
+    \item Deep Learning - MLP, CNN, autoencoders, VAE, GAN, basics of RNN and LSTM
+    \item Machine Learning - supervised and unsupervised techniques, kernel methods
 \end{itemize}
 }
-
 %------------------------------------------------
-
 \skillgroup{Miscellaneous}{
 \begin{itemize}
-    \item Linux - Ubuntu (preferred OS)
-    \item git, GitHub
-    \item Raspberry Pi, Arduino, etc.
+    \item Preferred OS: Linux-Ubuntu
+    \item git, GitHub 
+    \item Raspberry Pi, etc.
 \end{itemize}
 }
 
@@ -162,13 +202,13 @@ Machine Learning and Deep Learning - Research and Applications on Image Data
 
 \section{Extra Curriculars}
 \begin{itemize}
-    \item Active member of Elektronica club, Sci-tech Council, IIT Hyderabad
-    \item Participant in Inter-IIT Tech-meet, 2017
+    \item  Core member of Elektronica club, Sci-tech Council, IIT Hyderabad
+    \item Participant in Inter-IIT Tech-meet, 2017 and 2018
     \item Coordinator of Workshops and Hackathon, ELAN \& nvision - 2018
     \item Active volunteer for NSS, IIT Hyderabad
 \end{itemize}
 
-\blfootnote{Follow the link for latest version of my resume:  \href{https://github.com/AravindGanesh/resume}{\textit{https://github.com/AravindGanesh/resume}} }
+% \blfootnote{Follow the link for latest version of my resume:  \href{https://github.com/AravindGanesh/resume}{\textit{https://github.com/AravindGanesh/resume}} }
 
 \end{document}
 %----------------------------------------------------------------------------------------
